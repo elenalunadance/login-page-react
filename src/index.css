@@ -1,0 +1,11 @@
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/600.css';
+:root {
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
