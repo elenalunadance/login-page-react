@@ -75,15 +75,16 @@ const LoginRight = () => {
       bg='white'
       borderRadius={{ md: 'md', base: '0' }}
       h='100%'
-      maxH='100vh'
-      w={{ xl: '55%', lg: '60%', md: '70%', base: '100%' }}
+      maxH={{ base: 'none', md: '100vh' }}
+      w={{ xl: '55%', lg: '55%', md: '55%', base: '100%' }}
       p={{
         xl: '3rem 8rem 1.5rem 6rem',
-        lg: '2rem 2rem 1rem 2rem',
+        lg: '1rem 1rem 1rem 1rem',
         md: '1.5rem 2rem 0.75rem 1.5rem',
         base: '1rem 1rem 0.5rem 1rem',
       }}
       position='relative'
+      overflowY='visible'
     >
       <Flex
         gap={{ xl: 2, lg: 2, md: 1, base: 1 }}
@@ -269,11 +270,28 @@ const LoginRight = () => {
           flexDirection={{ base: 'column', md: 'row' }}
           fontSize={{ xl: '14px', lg: '12px', md: '10px', base: '12px' }}
         >
-          <Button type='submit' colorScheme='blue' width='full'>
+          <Button
+            type='submit'
+            colorScheme='blue'
+            width='full'
+            h={{ xl: '48px', lg: '40px', md: '35px', base: '35px' }}
+          >
             Create account
           </Button>
-          <Button variant='outline' width='full' bg='black' color='white'>
-            <Image src={iconGoogle} alt='Google' mr={2} />
+          <Button
+            variant='outline'
+            width='full'
+            bg='black'
+            color='white'
+            h={{ xl: '48px', lg: '40px', md: '35px', base: '35px' }}
+          >
+            <Image
+              src={iconGoogle}
+              alt='Google'
+              mr={2}
+              w='auto'
+              h={{ xl: '20px', lg: '15px', md: '10px', base: '10px' }}
+            />{' '}
             Sign-in with Google
           </Button>
         </Flex>
@@ -287,23 +305,25 @@ const LoginRight = () => {
         </Flex>
       </form>
       <Flex
-        mt={{ xl: '2rem', lg: '2rem', md: '1rem', base: '1rem' }}
-        mb={{ xl: '2rem', lg: '1.5rem', md: '1rem', base: '0.5rem' }}
+        mt={{ xl: '4rem', lg: '2rem', md: '0.5rem', base: '0.5rem' }}
+        mb={{ xl: '1rem', lg: '1rem', md: '0.5rem', base: '0.5rem' }}
         gap={{ xl: 2, lg: 2, md: 1, base: 1 }}
       >
-        <Button
-          variant='link'
-          p={0}
-          minW={{ xl: '130px', lg: '120px', md: '100px', base: '80px' }}
-        >
-          <Image src={googlePlay} alt='Google Play' />
+        <Button variant='link' p={0}>
+          <Image
+            src={googlePlay}
+            alt='Google Play'
+            w='auto'
+            h={{ xl: '40px', lg: '30px', md: '20px', base: '20px' }}
+          />{' '}
         </Button>
-        <Button
-          variant='link'
-          p={0}
-          minW={{ xl: '130px', lg: '120px', md: '100px', base: '80px' }}
-        >
-          <Image src={appStore} alt='App Store' />
+        <Button variant='link' p={0}>
+          <Image
+            src={appStore}
+            alt='App Store'
+            w='auto'
+            h={{ xl: '40px', lg: '30px', md: '20px', base: '20px' }}
+          />{' '}
         </Button>
       </Flex>
     </Box>

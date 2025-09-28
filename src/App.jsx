@@ -4,10 +4,16 @@ import LoginRight from './components/LoginRight';
 
 function App() {
   return (
-    <Box as='main' bg='#fff' h='100vh' w='100%'>
+    <Box
+      as='main'
+      bg='#fff'
+      h={{ base: 'auto', md: '100vh' }}
+      w='100%'
+      overflow='auto'
+    >
       <Box
         display='flex'
-        h='100vh'
+        h={{ base: 'auto', md: '100vh' }}
         w='100%'
         flexDirection={{ base: 'column', md: 'row' }}
         overflow='visible'
